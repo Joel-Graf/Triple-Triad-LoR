@@ -27,8 +27,10 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  firebase_core: ^1.20.0
   flutter:
     sdk: flutter
+  provider: ^6.0.0
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -61,6 +63,11 @@ flutter:
   # assets:
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
+  assets:
+    - assets/images/backgrounds/
+    - assets/images/regions/
+    - assets/images/cards/demacia/
+    - assets/images/cards/noxus/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
