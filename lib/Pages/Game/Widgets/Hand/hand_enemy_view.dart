@@ -3,7 +3,7 @@ import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/hand_model.dart';
 
 class HandEnemyView extends StatelessWidget {
-  const HandEnemyView({required this.model});
+  const HandEnemyView({super.key, required this.model});
 
   final HandModel model;
 
@@ -14,7 +14,7 @@ class HandEnemyView extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                     "assets/images/backgrounds/noxus-background.png"),
@@ -24,7 +24,7 @@ class HandEnemyView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   width: double.infinity,
                   child: SingleChildScrollView(
                     scrollDirection: Axis.horizontal,

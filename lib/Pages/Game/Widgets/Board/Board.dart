@@ -4,6 +4,8 @@ import 'package:truco_of_legends/Pages/Game/Widgets/Board/BoardTile/board_tile_v
 import 'package:provider/provider.dart';
 
 class Board extends StatelessWidget {
+  const Board({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Consumer<BoardController>(

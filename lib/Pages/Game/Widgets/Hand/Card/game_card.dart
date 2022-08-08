@@ -7,32 +7,28 @@ import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card_view.dar
 import 'package:provider/provider.dart';
 
 class GameCard extends StatefulWidget {
-  const GameCard({this.model});
+  const GameCard({super.key, this.model});
 
   final GameCardModel? model;
 
   bool get hasCard => model != null;
 
   @override
-  _GameCardState createState() => _GameCardState();
+  GameCardState createState() => GameCardState();
 }
 
-class _GameCardState extends State<GameCard> with ChangeNotifier {
-  //FIXME: Erro: Não está chamando o Dispose ao trocar para tela de Finished
+class GameCardState extends State<GameCard> with ChangeNotifier {
   @override
   Widget build(BuildContext context) {
     return widget.hasCard
         ? Draggable<GameCardModel>(
-            child: GameCardView(
-              model: widget.model!,
-            ),
             feedback: Material(
               color: Colors.transparent,
               child: GameCardView(
                 model: widget.model!,
               ),
             ),
-            childWhenDragging: EmpetyTile(),
+            childWhenDragging: const EmpetyTile(),
             data: widget.model!,
             onDragCompleted: () {
               widget.model!.team.isPlayer
@@ -42,7 +38,10 @@ class _GameCardState extends State<GameCard> with ChangeNotifier {
                       .remove(widget.model!);
               notifyListeners();
             },
+            child: GameCardView(
+              model: widget.model!,
+            ),
           )
-        : EmpetyTile();
+        : const EmpetyTile();
   }
 }

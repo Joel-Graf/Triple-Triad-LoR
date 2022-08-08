@@ -8,7 +8,7 @@ import 'package:truco_of_legends/Pages/Game/Widgets/Hand/hand_player_view.dart';
 import 'package:provider/provider.dart';
 
 class Hand extends StatelessWidget {
-  const Hand({required this.team});
+  const Hand({super.key, required this.team});
 
   final Team team;
 

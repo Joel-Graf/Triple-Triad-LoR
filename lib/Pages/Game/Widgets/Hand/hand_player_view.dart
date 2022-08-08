@@ -3,7 +3,7 @@ import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/hand_model.dart';
 
 class HandPlayerView extends StatelessWidget {
-  const HandPlayerView({required this.model});
+  const HandPlayerView({super.key, required this.model});
 
   final HandModel model;
 
@@ -14,7 +14,7 @@ class HandPlayerView extends StatelessWidget {
       child: Stack(
         children: [
           Container(
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
                     "assets/images/backgrounds/demacia-background.png"),
@@ -24,7 +24,7 @@ class HandPlayerView extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Container(
+                SizedBox(
                   width: double.infinity,
                   child: Wrap(
                     alignment: WrapAlignment.spaceEvenly,

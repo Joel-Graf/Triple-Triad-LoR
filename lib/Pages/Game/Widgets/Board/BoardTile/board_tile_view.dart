@@ -8,22 +8,22 @@ import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card_view.dar
 import 'package:provider/provider.dart';
 
 class BoardTileView extends StatefulWidget {
-  const BoardTileView({required this.model});
+  const BoardTileView({super.key, required this.model});
 
   final BoardTileModel model;
 
   @override
-  _BoardTileViewState createState() => _BoardTileViewState();
+  BoardTileViewState createState() => BoardTileViewState();
 }
 
-class _BoardTileViewState extends State<BoardTileView> with ChangeNotifier {
+class BoardTileViewState extends State<BoardTileView> with ChangeNotifier {
   @override
   Widget build(BuildContext context) {
     return DragTarget(
       builder: (context, List<Object?> candidateData, rejectedData) {
         return widget.model.hasCard
             ? GameCardView(model: widget.model.cardModel!)
-            : EmpetyTile();
+            : const EmpetyTile();
       },
       onWillAccept: (data) {
         return !widget.model.hasCard;
@@ -36,7 +36,7 @@ class _BoardTileViewState extends State<BoardTileView> with ChangeNotifier {
         if (Provider.of<BoardController>(context, listen: false)
             .isBoardFull()) {
           Provider.of<GameController>(context, listen: false)
-              .finishGame(model.team); //FIXME: Definir corretamete o vencedor
+              .finishGame(model.team);
         } else {
           Provider.of<GameController>(context, listen: false).changeTurn();
         }

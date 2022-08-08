@@ -23,21 +23,14 @@ class FinishedView extends StatelessWidget {
             ),
           ),
           Text(
-            "Jogador: " +
-                Provider.of<BoardController>(context, listen: false)
-                    .calculatePlayerScore()
-                    .toString(),
+            "Jogador: ${Provider.of<BoardController>(context, listen: false).calculatePlayerScore().toString()}",
             style: TextStyle(
               fontSize: 24,
               foreground: Paint()..color = Colors.blue,
             ),
           ),
           Text(
-            "Inimigo: " +
-                (20 -
-                        Provider.of<BoardController>(context, listen: false)
-                            .calculatePlayerScore())
-                    .toString(),
+            "Inimigo: ${(20 - Provider.of<BoardController>(context, listen: false).calculatePlayerScore()).toString()}",
             style: TextStyle(
               fontSize: 24,
               foreground: Paint()..color = Colors.red,
@@ -58,6 +51,5 @@ class FinishedView extends StatelessWidget {
     );
   }
 
-  // TODO: Verificar porquê HandController não reinicia
   void restartApp(context) {}
 }

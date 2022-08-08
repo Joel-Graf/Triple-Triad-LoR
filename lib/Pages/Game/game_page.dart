@@ -7,6 +7,8 @@ import 'package:truco_of_legends/Pages/Game/Widgets/Hand/hand.dart';
 import 'package:provider/provider.dart';
 
 class GamePage extends StatelessWidget {
+  const GamePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -31,18 +33,18 @@ class GamePage extends StatelessWidget {
                   ],
                 )
               : Column(
-                  children: <Widget>[
-                    const Expanded(
+                  children: const <Widget>[
+                    Expanded(
                       flex: 1,
-                      child: Hand(team: Team.ENEMY),
+                      child: Hand(team: Team.enemy),
                     ),
                     Expanded(
                       flex: 4,
                       child: Board(),
                     ),
-                    const Expanded(
+                    Expanded(
                       flex: 2,
-                      child: Hand(team: Team.PLAYER),
+                      child: Hand(team: Team.player),
                     ),
                   ],
                 ),

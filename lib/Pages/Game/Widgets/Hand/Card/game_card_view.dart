@@ -6,6 +6,7 @@ import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card_model.da
 
 class GameCardView extends StatelessWidget {
   const GameCardView({
+    super.key,
     required this.model,
   });
 
@@ -32,6 +33,7 @@ class GameCardView extends StatelessWidget {
 
 class GameCardBackground extends StatelessWidget {
   const GameCardBackground({
+    super.key,
     required this.image,
     required this.team,
   });
@@ -44,7 +46,7 @@ class GameCardBackground extends StatelessWidget {
     return Container(
       color: team.isPlayer ? Colors.blue : Colors.red,
       child: Padding(
-        padding: EdgeInsets.all(4),
+        padding: const EdgeInsets.all(4),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(5),
           child: Image.asset(
@@ -60,6 +62,7 @@ class GameCardBackground extends StatelessWidget {
 
 class GameCardContent extends StatelessWidget {
   const GameCardContent({
+    super.key,
     required this.attributes,
     required this.region,
   });
@@ -93,7 +96,7 @@ class GameCardContent extends StatelessWidget {
 }
 
 class AttributesView extends StatelessWidget {
-  const AttributesView({required this.attributes});
+  const AttributesView({super.key, required this.attributes});
 
   final Attributes attributes;
 
@@ -102,23 +105,23 @@ class AttributesView extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        AttributeText(attributes.values[Direction.TOP].toString()),
+        AttributeText(text: attributes.values[Direction.top].toString()),
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            AttributeText(attributes.values[Direction.LEFT].toString()),
-            AttributeText(' '),
-            AttributeText(attributes.values[Direction.RIGHT].toString())
+            AttributeText(text: attributes.values[Direction.left].toString()),
+            const AttributeText(text: ' '),
+            AttributeText(text: attributes.values[Direction.right].toString())
           ],
         ),
-        AttributeText(attributes.values[Direction.BOTTOM].toString())
+        AttributeText(text: attributes.values[Direction.bottom].toString())
       ],
     );
   }
 }
 
 class AttributeText extends StatelessWidget {
-  const AttributeText(this.text);
+  const AttributeText({super.key, required this.text});
 
   final String text;
 
@@ -139,7 +142,7 @@ class AttributeText extends StatelessWidget {
         ),
         Text(
           text,
-          style: TextStyle(
+          style: const TextStyle(
             fontWeight: FontWeight.bold,
             fontSize: 12,
             color: Colors.white,
@@ -151,7 +154,7 @@ class AttributeText extends StatelessWidget {
 }
 
 class RegionView extends StatelessWidget {
-  const RegionView({required this.region});
+  const RegionView({super.key, required this.region});
 
   final Region region;
 
@@ -172,7 +175,7 @@ class RegionView extends StatelessWidget {
                 BoxShadow(
                   color: Colors.black.withOpacity(0.7),
                   blurRadius: 0.4,
-                  offset: Offset(0, 0),
+                  offset: const Offset(0, 0),
                 ),
               ],
             ),

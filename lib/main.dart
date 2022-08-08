@@ -34,7 +34,7 @@ class MyApp extends StatelessWidget {
           create: (BuildContext context) => GameController(),
         ),
       ],
-      child: MaterialApp(
+      child: const MaterialApp(
         title: 'truco_of_legends',
         home: GamePage(),
       ),

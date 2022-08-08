@@ -1,34 +1,34 @@
-enum Team { PLAYER, ENEMY }
+enum Team { player, enemy }
 
 extension TeamExt on Team {
-  bool get isPlayer => this == Team.PLAYER;
+  bool get isPlayer => this == Team.player;
 }
 
-enum Rarity { COMMON, RARE, EPIC, LEGENDARY }
+enum Rarity { common, rare, epic, legendary }
 
-enum Direction { TOP, RIGHT, BOTTOM, LEFT }
+enum Direction { top, right, bottom, left }
 
 extension DirectionExt on Direction {
   Direction get opposite {
     switch (this) {
-      case Direction.TOP:
-        return Direction.BOTTOM;
-      case Direction.RIGHT:
-        return Direction.LEFT;
-      case Direction.BOTTOM:
-        return Direction.TOP;
-      case Direction.LEFT:
-        return Direction.RIGHT;
+      case Direction.top:
+        return Direction.bottom;
+      case Direction.right:
+        return Direction.left;
+      case Direction.bottom:
+        return Direction.top;
+      case Direction.left:
+        return Direction.right;
     }
   }
 }
 
-enum Region { DEMACIA, NOXUS }
+enum Region { demacia, noxus }
 
 extension RegionExt on Region {
   static const Map _names = {
-    Region.DEMACIA: 'demacia',
-    Region.NOXUS: 'noxus',
+    Region.demacia: 'demacia',
+    Region.noxus: 'noxus',
   };
 
   String get name => _names[this];

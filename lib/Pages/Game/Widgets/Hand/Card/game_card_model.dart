@@ -19,6 +19,6 @@ class GameCardModel {
   List<Powers>? powers;
 
   void flip() {
-    this.team = this.team.isPlayer ? Team.ENEMY : Team.PLAYER;
+    team = team.isPlayer ? Team.enemy : Team.player;
   }
 }

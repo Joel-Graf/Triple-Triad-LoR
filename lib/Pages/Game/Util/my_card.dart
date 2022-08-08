@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class MyCard extends StatelessWidget {
-  const MyCard({required this.child});
+  const MyCard({super.key, required this.child});
 
   final Widget child;
 
@@ -11,7 +11,7 @@ class MyCard extends StatelessWidget {
       height: 81,
       width: 81,
       child: Card(
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
           borderRadius: BorderRadius.all(
             Radius.circular(5),
           ),

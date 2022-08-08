@@ -37,13 +37,13 @@ class Point {
     final reference = this;
 
     if (reference.y < relative.y) {
-      return Direction.TOP;
+      return Direction.top;
     } else if (reference.x < relative.x) {
-      return Direction.RIGHT;
+      return Direction.right;
     } else if (reference.y > relative.y) {
-      return Direction.BOTTOM;
+      return Direction.bottom;
     } else if (reference.x > relative.x) {
-      return Direction.LEFT;
+      return Direction.left;
     }
 
     throw ErrorDescription(
@@ -54,16 +54,16 @@ class Point {
 class Attributes {
   Attributes(this._top, this._right, this._bottom, this._left);
 
-  int _top;
-  int _right;
-  int _bottom;
-  int _left;
+  final int _top;
+  final int _right;
+  final int _bottom;
+  final int _left;
 
   Map<Direction, int> get values => {
-        Direction.TOP: _top,
-        Direction.RIGHT: _right,
-        Direction.BOTTOM: _bottom,
-        Direction.LEFT: _left
+        Direction.top: _top,
+        Direction.right: _right,
+        Direction.bottom: _bottom,
+        Direction.left: _left
       };
 }
 
