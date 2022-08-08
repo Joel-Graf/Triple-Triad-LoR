@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:truco_of_legends/Pages/Game/Providers/GameController.dart';
-import 'package:truco_of_legends/Pages/Game/Providers/HandController.dart';
-import 'package:truco_of_legends/Pages/Game/Util/Constants.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/game_controller.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/hand_controller.dart';
+import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/HandEnemyView.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/HandModel.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/HandPlayerView.dart';

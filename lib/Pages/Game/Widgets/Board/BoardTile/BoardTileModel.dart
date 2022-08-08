@@ -1,4 +1,4 @@
-import 'package:truco_of_legends/Pages/Game/Util/Classes.dart';
+import 'package:truco_of_legends/Pages/Game/Util/classes.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/GameCardModel.dart';
 
 class BoardTileModel {

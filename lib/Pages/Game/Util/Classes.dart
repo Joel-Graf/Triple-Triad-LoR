@@ -1,5 +1,5 @@
 import 'package:flutter/cupertino.dart';
-import 'package:truco_of_legends/Pages/Game/Util/Constants.dart';
+import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
 
 class Point {
   const Point(this._x, this._y);

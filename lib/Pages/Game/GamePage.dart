@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:truco_of_legends/Pages/Game/Providers/GameController.dart';
-import 'package:truco_of_legends/Pages/Game/Util/Constants.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/game_controller.dart';
+import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Board/Board.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Finished/FinishedView.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Hand.dart';

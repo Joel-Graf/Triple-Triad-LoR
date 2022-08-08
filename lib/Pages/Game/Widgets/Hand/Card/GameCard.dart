@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:truco_of_legends/Pages/Game/Providers/HandController.dart';
-import 'package:truco_of_legends/Pages/Game/Util/Constants.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/hand_controller.dart';
+import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
 import 'package:truco_of_legends/Pages/Game/Util/EmpetyTile.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/GameCardModel.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/GameCardView.dart';

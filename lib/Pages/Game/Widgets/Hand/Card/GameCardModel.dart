@@ -1,5 +1,5 @@
-import 'package:truco_of_legends/Pages/Game/Util/Classes.dart';
-import 'package:truco_of_legends/Pages/Game/Util/Constants.dart';
+import 'package:truco_of_legends/Pages/Game/Util/classes.dart';
+import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
 
 class GameCardModel {
   GameCardModel({

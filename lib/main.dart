@@ -1,20 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:truco_of_legends/Pages/Game/Providers/BoardController.dart';
-import 'package:truco_of_legends/Pages/Game/Providers/GameController.dart';
-import 'package:truco_of_legends/Pages/Game/Providers/HandController.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/board_controller.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/game_controller.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/hand_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
 import 'package:truco_of_legends/Pages/Game/GamePage.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
+@immutable
 class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
-    SystemChrome.setEnabledSystemUIOverlays([]);
+    SystemChrome.setEnabledSystemUIMode(SystemUiMode.immersiveSticky);
 
     return MultiProvider(
       providers: [

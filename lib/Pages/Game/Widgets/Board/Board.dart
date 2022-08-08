@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:truco_of_legends/Pages/Game/Providers/BoardController.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/board_controller.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Board/BoardTile/BoardTileView.dart';
 import 'package:provider/provider.dart';
 

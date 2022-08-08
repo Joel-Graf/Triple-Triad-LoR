@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:truco_of_legends/Pages/Game/Providers/BoardController.dart';
-import 'package:truco_of_legends/Pages/Game/Util/Constants.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/board_controller.dart';
+import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
 import 'package:provider/provider.dart';
 
 class FinishedView extends StatelessWidget {

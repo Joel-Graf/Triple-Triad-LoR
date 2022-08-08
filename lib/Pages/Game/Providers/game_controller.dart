@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:truco_of_legends/Pages/Game/Util/Constants.dart';
+import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
 
 class GameController with ChangeNotifier {
   Team _turn = Team.PLAYER;
