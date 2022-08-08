@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:truco_of_legends/Pages/Game/Util/classes.dart';
 import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/GameCardModel.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card_model.dart';
 
 abstract class HandController with ChangeNotifier {
   HandController(this._cards);

@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:truco_of_legends/Pages/Game/Providers/game_controller.dart';
 import 'package:truco_of_legends/Pages/Game/Providers/hand_controller.dart';
 import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Hand/HandEnemyView.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Hand/HandModel.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Hand/HandPlayerView.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Hand/hand_enemy_view.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Hand/hand_model.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Hand/hand_player_view.dart';
 import 'package:provider/provider.dart';
 
 class Hand extends StatelessWidget {

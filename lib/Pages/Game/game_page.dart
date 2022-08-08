@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:truco_of_legends/Pages/Game/Providers/game_controller.dart';
 import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Board/Board.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Finished/FinishedView.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Hand.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Board/board.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Finished/finished_view.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Hand/hand.dart';
 import 'package:provider/provider.dart';
 
 class GamePage extends StatelessWidget {

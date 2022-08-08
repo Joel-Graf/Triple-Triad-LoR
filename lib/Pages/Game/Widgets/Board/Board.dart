@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:truco_of_legends/Pages/Game/Providers/board_controller.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Board/BoardTile/BoardTileView.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Board/BoardTile/board_tile_view.dart';
 import 'package:provider/provider.dart';
 
 class Board extends StatelessWidget {

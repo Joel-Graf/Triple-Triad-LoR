@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:truco_of_legends/Pages/Game/Util/MyCard.dart';
+import 'package:truco_of_legends/Pages/Game/Util/my_card.dart';
 
 class EmpetyTile extends StatelessWidget {
   @override

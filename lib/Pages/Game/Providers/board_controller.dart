@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:truco_of_legends/Pages/Game/Util/classes.dart';
 import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Board/BoardTile/BoardTileModel.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Board/BoardTile/board_tile_model.dart';
 
 class BoardController with ChangeNotifier {
   final List<BoardTileModel> _boardTiles = [

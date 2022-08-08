@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/GameCard.dart';
-import 'package:truco_of_legends/Pages/Game/Widgets/Hand/HandModel.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Hand/hand_model.dart';
 
-class HandEnemyView extends StatelessWidget {
-  const HandEnemyView({required this.model});
+class HandPlayerView extends StatelessWidget {
+  const HandPlayerView({required this.model});
 
   final HandModel model;
 
@@ -17,7 +17,7 @@ class HandEnemyView extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 image: AssetImage(
-                    "assets/images/backgrounds/noxus-background.png"),
+                    "assets/images/backgrounds/demacia-background.png"),
                 fit: BoxFit.cover,
               ),
             ),
@@ -26,16 +26,11 @@ class HandEnemyView extends StatelessWidget {
               children: [
                 Container(
                   width: double.infinity,
-                  child: SingleChildScrollView(
-                    scrollDirection: Axis.horizontal,
-                    child: Row(
-                      children: model.cards
-                          .map((cardModel) => Padding(
-                                padding: const EdgeInsets.all(3.0),
-                                child: GameCard(model: cardModel),
-                              ))
-                          .toList(),
-                    ),
+                  child: Wrap(
+                    alignment: WrapAlignment.spaceEvenly,
+                    children: model.cards
+                        .map((cardModel) => GameCard(model: cardModel))
+                        .toList(),
                   ),
                 ),
               ],
