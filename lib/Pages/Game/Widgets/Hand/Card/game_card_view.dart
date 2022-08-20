@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:truco_of_legends/Pages/Game/Util/classes.dart';
 import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
-import 'package:truco_of_legends/Pages/Game/Util/my_card.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Util/my_card.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card_model.dart';
 
 class GameCardView extends StatelessWidget {

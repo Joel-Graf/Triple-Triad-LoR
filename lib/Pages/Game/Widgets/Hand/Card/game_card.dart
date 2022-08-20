@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:truco_of_legends/Pages/Game/Providers/hand_controller.dart';
 import 'package:truco_of_legends/Pages/Game/Util/constants.dart';
-import 'package:truco_of_legends/Pages/Game/Util/empety_tile.dart';
+import 'package:truco_of_legends/Pages/Game/Widgets/Util/empety_tile.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card_model.dart';
 import 'package:truco_of_legends/Pages/Game/Widgets/Hand/Card/game_card_view.dart';
 import 'package:provider/provider.dart';
