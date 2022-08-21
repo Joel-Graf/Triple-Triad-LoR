@@ -1,6 +1,7 @@
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:truco_of_legends/Pages/Auth/Widgets/auth_form.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -33,6 +34,7 @@ class LoginPage extends StatelessWidget {
                       vertical: 10,
                       horizontal: 70,
                     ),
+                    margin: const EdgeInsets.all(10),
                     transform: Matrix4.rotationZ(-4 * pi / 180)
                       ..translate(-5.0),
                     decoration: BoxDecoration(
@@ -53,7 +55,8 @@ class LoginPage extends StatelessWidget {
                         color: Theme.of(context).colorScheme.secondary,
                       ),
                     ),
-                  )
+                  ),
+                  AuthForm(),
                 ],
               ),
             )
