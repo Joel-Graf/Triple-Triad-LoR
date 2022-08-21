@@ -5,6 +5,7 @@ import 'package:truco_of_legends/Pages/Game/Providers/hand_controller.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/services.dart';
 import 'package:truco_of_legends/Pages/Game/game_page.dart';
+import 'package:truco_of_legends/Pages/Auth/auth_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
       ],
       child: const MaterialApp(
         title: 'truco_of_legends',
-        home: GamePage(),
+        home: true ? LoginPage() : GamePage(),
       ),
     );
   }
