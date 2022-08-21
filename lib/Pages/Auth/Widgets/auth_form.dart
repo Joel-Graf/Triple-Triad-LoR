@@ -30,7 +30,20 @@ class _AuthFormState extends State<AuthForm> {
   }
 
   void _submit() {
+    final isValid = _formKey.currentState?.validate() ?? false;
+
+    if (!isValid) {
+      return;
+    }
+
     setState(() => _isLoading = true);
+
+    _formKey.currentState?.save();
+
+    if (_isSignup()) {
+    } else {}
+
+    setState(() => _isLoading = false);
   }
 
   @override
