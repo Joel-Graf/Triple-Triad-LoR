@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -31,6 +32,22 @@ class _AuthFormState extends State<AuthForm> {
     });
   }
 
+  void _showErrorDialog(String msg) {
+    showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        title: Text('Ocorreu um Erro!'),
+        content: Text(msg),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text('Fechar'),
+          )
+        ],
+      ),
+    );
+  }
+
   Future<void> _submit() async {
     final isValid = _formKey.currentState?.validate() ?? false;
 
@@ -43,13 +60,23 @@ class _AuthFormState extends State<AuthForm> {
     _formKey.currentState?.save();
     AuthController authController = Provider.of(context, listen: false);
 
-    if (_isSignup()) {
-      print("_isSignup");
-      await authController.signup(
-        _authData['email']!,
-        _authData['password']!,
-      );
-    } else {}
+    try {
+      if (_isSignup()) {
+        await authController.signup(
+          _authData['email']!,
+          _authData['password']!,
+        );
+      } else {
+        await authController.login(
+          _authData['email']!,
+          _authData['password']!,
+        );
+      }
+    } on FirebaseAuthException catch (error) {
+      _showErrorDialog(error.message ?? 'Ocorreu um erro na autenticação');
+    } catch (error) {
+      _showErrorDialog('Ocorreu um erro na autenticação');
+    }
 
     setState(() => _isLoading = false);
   }

@@ -23,7 +23,7 @@ class LoginPage extends StatelessWidget {
                 ),
               ),
             ),
-            Container(
+            SizedBox(
               width: double.infinity,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,7 +40,7 @@ class LoginPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(20),
                       color: Colors.deepOrange.shade900,
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           blurRadius: 8,
                           color: Colors.black26,
