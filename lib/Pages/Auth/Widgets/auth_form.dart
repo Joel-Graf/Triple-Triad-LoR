@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:provider/provider.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/auth_controller.dart';
 
 enum AuthMode { signup, login }
 
@@ -21,7 +23,7 @@ class _AuthFormState extends State<AuthForm> {
     'password': '',
   };
 
-  bool _isSignup() => _authMode == AuthMode.login;
+  bool _isSignup() => _authMode == AuthMode.signup;
 
   void _switchAuthMode() {
     setState(() {
@@ -29,7 +31,7 @@ class _AuthFormState extends State<AuthForm> {
     });
   }
 
-  void _submit() {
+  Future<void> _submit() async {
     final isValid = _formKey.currentState?.validate() ?? false;
 
     if (!isValid) {
@@ -39,8 +41,14 @@ class _AuthFormState extends State<AuthForm> {
     setState(() => _isLoading = true);
 
     _formKey.currentState?.save();
+    AuthController authController = Provider.of(context, listen: false);
 
     if (_isSignup()) {
+      print("_isSignup");
+      await authController.signup(
+        _authData['email']!,
+        _authData['password']!,
+      );
     } else {}
 
     setState(() => _isLoading = false);
@@ -68,7 +76,7 @@ class _AuthFormState extends State<AuthForm> {
                   labelText: 'E-mail',
                 ),
                 keyboardType: TextInputType.emailAddress,
-                onSaved: (email) => _authData['email'] == email,
+                onSaved: (email) => _authData['email'] = email ?? '',
                 validator: (_email) {
                   final email = _email ?? '';
 
@@ -85,11 +93,11 @@ class _AuthFormState extends State<AuthForm> {
                 ),
                 keyboardType: TextInputType.visiblePassword,
                 controller: _passwordController,
-                onSaved: (password) => _authData['password'] == password,
+                onSaved: (password) => _authData['password'] = password ?? '',
                 validator: (_password) {
                   final password = _password ?? '';
 
-                  if (password.isEmpty || password.length < 5) {
+                  if (password.isEmpty || password.length < 6) {
                     return 'Informe uma senha válida';
                   }
 

@@ -1,4 +1,7 @@
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'package:flutter/material.dart';
+import 'package:truco_of_legends/Pages/Game/Providers/auth_controller.dart';
 import 'package:truco_of_legends/Pages/Game/Providers/board_controller.dart';
 import 'package:truco_of_legends/Pages/Game/Providers/game_controller.dart';
 import 'package:truco_of_legends/Pages/Game/Providers/hand_controller.dart';
@@ -7,8 +10,12 @@ import 'package:flutter/services.dart';
 import 'package:truco_of_legends/Pages/Game/game_page.dart';
 import 'package:truco_of_legends/Pages/Auth/auth_page.dart';
 
-void main() {
-  runApp(const MyApp());
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+  runApp(MyApp());
 }
 
 @immutable
@@ -33,6 +40,9 @@ class MyApp extends StatelessWidget {
         ),
         ChangeNotifierProvider(
           create: (BuildContext context) => GameController(),
+        ),
+        ChangeNotifierProvider(
+          create: (BuildContext context) => AuthController(),
         ),
       ],
       child: const MaterialApp(
