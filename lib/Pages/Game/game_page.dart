@@ -32,8 +32,8 @@ class GamePage extends StatelessWidget {
                     ),
                   ],
                 )
-              : Column(
-                  children: const <Widget>[
+              : const Column(
+                  children: <Widget>[
                     Expanded(
                       flex: 1,
                       child: Hand(team: Team.enemy),
